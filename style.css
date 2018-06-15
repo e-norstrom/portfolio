@@ -19,6 +19,10 @@ body {
   height: 100vh;
 }
 
+.nav-toggle-button {
+  display: none;
+}
+
 .navbar {
   background: lightblue;
   list-style-type: none;
@@ -96,6 +100,17 @@ ul {
 }
 
 @media (max-width: 700px) {
+  .nav-toggle-container {
+    display: flex;
+    justify-content: flex-end;
+    align-self: auto;
+}
+  .nav-toggle-button {
+    display: initial;
+    margin-right: 1em;
+    margin-top: 1em;
+    cursor: pointer;;
+  }
   .nav-container {
     list-style-type: none;
     display: flex;
@@ -107,7 +122,9 @@ ul {
     background: lightpink;
     justify-content: center;
     text-align: center;
- }
+    display: none;
+    outline: none;
+  }
   a {
     display: block;
     padding: 5px;
@@ -121,4 +138,13 @@ ul {
     grid-gap: 1em;
     background: grey;
   }
+}
+
+.noSelect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
