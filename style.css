@@ -32,6 +32,7 @@ body {
   position: sticky;
   width: auto;
   z-index: 100;
+  display: inherit;
 }
 
 .nav-container {
@@ -44,6 +45,7 @@ body {
 .nav-container > li {
   margin: 8px;
   background: lightpink;
+  display: block;
 }
 
 a {
