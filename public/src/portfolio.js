@@ -14,7 +14,6 @@ const crossIcon = 'fa-times';
 const dropDown = 'dropdown-fade-in';
 let hiddenItems = true;
 
-
 // Helper function to toggle the burger icon on small screens
 const toggleIcon = function(element, icon) {
   element.classList.toggle(icon);
@@ -36,6 +35,7 @@ const addClass = (parent, aClass) => {
     element.classList.add(aClass);
   });
 };
+addClass(navButtons, dropDown);
 
 // Reset navbar on resizing browser window
 function resetNavBar() {
@@ -69,7 +69,7 @@ function closeNavbarAfterClick() {
   }
 };
 
-addClass(navButtons, dropDown);
+// addClass(navButtons, dropDown);
 burgerContainer.addEventListener('click', toggleNavButtons);
 navButtonsUl.addEventListener('click', closeNavbarAfterClick);
 maxWidth.addListener(resetNavBar);
