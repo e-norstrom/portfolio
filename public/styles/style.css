@@ -1,4 +1,8 @@
 
+:root {
+  --main-color: white;
+}
+
 @keyframes fade-in {
   0% {
     opacity: 0;
@@ -25,40 +29,38 @@
 .dropdown-fade-in {
   animation: dropdown-fade-in 1s;
 }
-.noSelect {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
 html {
   scroll-behavior: smooth;
 }
 body {
   font-family: 'Open Sans', sans-serif;
   background-position: center;
-  background: white;
+  background: var(--main-color);
+  color: black;
+}
+button {
+  background: transparent;
+  border-style: none;
 }
 .navbar {
-  background: lightblue;
+  background: transparent;
   list-style-type: none;
   top: 10px;
   left: 0;
   right: 0;
-  position: sticky;
-  width: auto;
+  position: fixed;
+  width: 100%;
   z-index: 100;
   display: inherit;
 }
+
 .icon-container {
   display: none;
 }
 .nav-buttons {
   display: flex;
   justify-content: space-around;
-  background: lightgrey;
+  margin: 0 1rem;
   padding: 0;
 }
 .hide-name {
@@ -66,7 +68,7 @@ body {
 }
 .filler {
   flex-grow: 10;
-  background: rgba(0, 0, 0, 0.0) !important
+  opacity: 0;
 }
 ul {
   list-style-type: none;
@@ -76,19 +78,29 @@ li {
 }
 .nav-buttons > li {
   margin: 8px;
-  background: lightpink;
   display: block;
   padding: 0;
+  margin: 0.5rem 0.5rem;
 }
+
+.nav-buttons > li > a {
+  border-top: 1.5px solid rgba(0, 0, 0, 0);
+  border-bottom: 1.5px solid rgba(0, 0, 0, 0);
+  transition: border 1s ease;
+}
+.nav-buttons > li > a:hover {
+  border-top: 1.5px solid rgba(0, 0, 0, 1);
+  border-bottom: 1.5px solid rgba(0, 0, 0, 1);
+}
+
 a {
   display: block;
-  padding: 20px;
+  padding: 10px;
   text-decoration: none;
   color: black;
   margin: 0 auto;
-  width: 100%;
-  margin-left: auto;
 }
+
 .center-div {
   text-align: center;
   margin: auto;
@@ -96,6 +108,7 @@ a {
 }
 .welcome {
   background: linear-gradient(45deg, rgba(186, 207, 242, 0.70), rgba(241, 200, 185, 0.7));
+  background-size: contain;
   padding: inherit;
   display: flex;
   background-size: auto;
@@ -148,43 +161,52 @@ a {
   .nav-toggle-container {
     display: flex;
     justify-content: flex-end;
-    align-self: auto;
+    align-self: center;
+    margin: 0.5em 1em 1em 1em;
+    position: relative;
+    border-bottom: 2px white solid;
   }
   .hide {
     display: none !important
   }
   .hide-name {
     display: inherit;
-    align-items: flex-end;
-    margin-left: 0.5em;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 0.5rem;
+    border: 2px solid white;
+    font-size: 1.2rem;
   }
   .icon-container {
-    display: inherit;
-    margin-right: 1em;
-    margin-top: 1em;
+    display: flex;
+    margin-bottom: 0.5rem;
     cursor: pointer;
-    align-items: flex-end;
+    align-items: center;
   }
   .nav-buttons {
     list-style-type: none;
     display: flex;
     justify-content: center;
-    background: lightgrey;
     flex-direction: column;
   }
   .nav-buttons > li {
-    background: lightpink;
+    display: flex;
+    background: white;
     justify-content: center;
     text-align: center;
     display: none;
     outline: none;
     list-style-type: none;
+    align-items: center;
   }
-  a {
-    display: block;
+  .nav-buttons > li > a {
+    display: flex;
     padding: 5px;
     text-decoration: none;
-    color: black;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    width: 100%;
   }
   .grid-container {
     display: grid;
