@@ -12,7 +12,7 @@
     <header role="banner" class="fade-in">
       <nav role="navigation" class="navbar" id="navbar">
         <div class="nav-toggle-container">
-          <div class="hide-name"><a href="#top">Lorem Ipsum</a></div>
+          <div class="hide-name"><a href="#top">EN</a></div>
           <div class="filler"></div>
           <div class="icon-container">
             <button role="button" id="burger-icon" class="fas fa-bars fa-2x"></button>
@@ -20,39 +20,124 @@
         </div>
         <div class="li-items">
           <ul class="nav-buttons">
-            <li class="hide"><a href="#top">Lorem Ipsum</a></li>
+            <li class="hide"><a href="#top">Elias Norstrom</a></li>
             <li class="filler hide"></li>
-            <li><a href="#top">Home</a></li>
+            <li><a href="#home">Home</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
       </nav>
     </header>
-    <main role="main" class="center-div">
+    <main role="main" id="home" class="center-div">
       <div id="welcome-section" class="welcome">
         <div class="center-div">
-          <h1>Lorem ipsum</h1>
-          <h2>lorem</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+          <h1>Hello.</h1>
+          <h2>I'm Elias, a front-end developer.</h2>
+          <a href="#projects" class="welcome-arrow"><i class="fas fa-2x fa-angle-down"></i></a>
         </div>
       </div>
     </main>
-      <div id="projects">
+      <div id="projects" class="projects">
+        <h3>Projects</h3>
+        <hr>
         <div class="grid-container">
-          <div class="grid-item project-tile"><a href="#" target="_blank">project1</a></div>
-          <div class="grid-item project-tile"><a href="#" target="_blank">project2</a></div>
-          <div class="grid-item project-tile"><a href="#" target="_blank">project3</a></div>
-          <div class="grid-item project-tile"><a href="#" target="_blank">project4</a></div>
+          <div class="grid-item project-tile calculator">
+            <a href="https://elnorstrom.github.io/react-calculator/" target="_blank">
+              <img src="./images/calculator.png"></img>
+            </a>
+          </div>
+          <div class="grid-item calculator-text project-text">
+            <a href="https://elnorstrom.github.io/react-calculator/" target="_blank">
+              <h3>Calculator</h3>
+              A light, elemental calculator, with a minimal yet direct design providing a bright, eye-catching UI for a distraction free calculating experience.<br>
+              Made with React & SASS utilising Webpack and Yarn.
+            </a>
+          </div>
+          <div class="grid-item project-tile quote-machine">
+            <a href="https://elnorstrom.github.io/steven-wright-quote-machine/" target="_blank">
+              <img src="./images/sw-quote-machine.png"></img>
+            </a>
+          </div>
+          <div class="grid-item quote-machine-text project-text">
+            <a href="https://elnorstrom.github.io/steven-wright-quote-machine/" target="_blank">
+              <h3>Steven Wright Random Quote Machine</h3>
+              The Steven Wright Random Quote Machine gives you a glimpse into Mr. Wrights surreal mind, a few clicks is all it takes to see the world from a different perspective.
+              If any quote particularly tickles your fancy, use the tweet button to share it with the world.
+            </a>
+          </div>
+          <div class="grid-item project-tile wikipedia">
+            <a href="https://elnorstrom.github.io/wikipedia-viewer/" target="_blank">
+              <img src="./images/wiki.png"></img>
+            </a>
+          </div>
+          <div class="grid-item wikipedia-text project-text">
+            <a href="https://elnorstrom.github.io/wikipedia-viewer/" target="_blank">
+              <h3>Wiki.</h3>
+              A minimal Wikipedia search result viewer, displaying the
+              top ten search results. Simple and straightforward without distractions. If you're yearning for something unexpected, use the random button
+              to display a random article from Wikipedia.
+            </a>
+          </div>
+          <div class="grid-item project-tile twitch">
+            <a href="https://elnorstrom.github.io/twitch-tv-status/" target="_blank">
+              <img src="./images/twitch-status.png"></img>
+            </a>
+          </div>
+          <div class="grid-item twitch-text project-text">
+            <a href="https://elnorstrom.github.io/twitch-tv-status/" target="_blank">
+              <h3>Twitch Status</h3>
+              The Twitch TV status viewer tells you whether a channel is currently online and what they are showing, with links straight to the action. Made using the Twitch API.
+            </a>
         </div>
       </div>
+    </div>
+    <section id="about" class="about">
+      <h3>About</h3>
+      <hr>
+      <p>Hello again. : )<br>
+        After many years of experince working in customer service I decided to embark on a new challenge,
+        teaching myself to code. And I love it. Mainly focused on JavaScript, I’ve also dug into
+        React, ES6, jQuery, Bootstrap, JSX, HTML, CSS, SCSS/SASS, with tools like Webpack, Babel, npm, Yarn, Git and GitHub,
+        but I’m always eager to learn something new, so whatever you have in mind let's chat, down yonder. &darr;
+      </p>
+      <hr>
+      <div class="flex-filler"></div>
+    </section>
     <footer>
-      <ul id="contact" class="footer-container">
-        <li><a id="profile-link" href="#" target="_blank"><i class="fab fa-github fa-3x"></i></a></li>
-        <li><a href="#" target="_blank"><i class="fab fa-free-code-camp fa-3x"></i></a></li>
+      <div id="contact" class="contact">
+        <h3>Contact</h3>
+        <hr>
+        <div></div>
+          <p>I'm London based but don't let that stop you if you're not.<br>
+            For freelance, non-profit, your start-up or anything else,<br>
+            say hello back:</p>
+        <div>
+          <div class="button"><a href="mailto:elias.norstromm@gmail.com">Contact</a></div>
+        </div>
+      </div>
+      <hr>
+      <ul id="footer" class="footer-container">
+        <li>
+          <a href="https://github.com/elnorstrom" target="_blank" id="profile-link">
+            <i class="fab fa-github fa-2x"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.freecodecamp.org/elnorstrom" target="_blank">
+            <i class="fab fa-free-code-camp fa-2x"></i>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:elias.norstromm@gmail.com">
+            <i class="fas fa-2x fa-envelope"></i>
+          </a>
+        </li>
       </ul>
     </footer>
   </body>
 </html>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zenscroll/4.0.2/zenscroll.js"></script>
 <script src="/src/portfolio.js"></script>
