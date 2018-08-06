@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
   console.log('DOM is loaded.');
 });
 
+zenscroll.setup(null, 0);
+
 const burgerContainer = document.querySelector('.icon-container');
 const burgerIcon = document.getElementById('burger-icon');
 const navButtonsUl = document.querySelector('.nav-buttons');
@@ -69,7 +71,6 @@ function closeNavbarAfterClick() {
   }
 };
 
-// addClass(navButtons, dropDown);
 burgerContainer.addEventListener('click', toggleNavButtons);
 navButtonsUl.addEventListener('click', closeNavbarAfterClick);
 maxWidth.addListener(resetNavBar);
